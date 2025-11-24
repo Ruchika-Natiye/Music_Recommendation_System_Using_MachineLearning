@@ -41,14 +41,15 @@ The dataset contains fields such as:
 * artist_name
 * genre
 * Additional metadata
-
+![img]()
 ## 📸 Visualizations
 ### 🎤 Top 10 Genres
 The system plots a bar chart showing the most popular music genres.
+![img}()
 
 ### 🎙️ Top 10 Artists
 A bar chart showing artists with the highest number of songs in the dataset.
-
+![img}()
 These visualizations help understand the dataset distribution before applying ML techniques.
 
 ## 🧠 How The Recommendation System Works
@@ -90,12 +91,15 @@ Track Name
 Artist
 Genre
 Similarity Score
+![img]()
 
 ## 📊 Recommendation Visualization
 A horizontal bar plot shows the recommended song names vs. similarity score for clarity:
 ```python
 sns.barplot(y='track_name', x='similarity', data=recommended_songs)
 ```
+![img]()
+
 ## 📌 Future Improvements
 🔹 Add audio-based features (MFCC, tempo, etc.)
 🔹 Add user-based collaborative filtering
