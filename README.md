@@ -46,7 +46,7 @@ The dataset contains fields such as:
 ## 📸 Visualizations
 ### 🎤 Top 10 Genres
 The system plots a bar chart showing the most popular music genres.
-![img}()
+![img](https://github.com/Ruchika-Natiye/Music_Recommendation_System_Using_MachineLearning/blob/12267cb9883cf05bf840f3837bf1ad6f0952f666/top10%20artist.png)
 
 ### 🎙️ Top 10 Artists
 A bar chart showing artists with the highest number of songs in the dataset.
