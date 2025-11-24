@@ -92,7 +92,7 @@ Track Name
 Artist
 Genre
 Similarity Score
-![img]()
+![img](https://github.com/Ruchika-Natiye/Music_Recommendation_System_Using_MachineLearning/blob/c8d6ed14dd3460bba5434086c9acfe595fb0a574/i1.png)
 
 ## 📊 Recommendation Visualization
 A horizontal bar plot shows the recommended song names vs. similarity score for clarity:
