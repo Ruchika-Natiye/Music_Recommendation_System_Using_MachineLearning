@@ -50,7 +50,7 @@ The system plots a bar chart showing the most popular music genres.
 
 ### 🎙️ Top 10 Artists
 A bar chart showing artists with the highest number of songs in the dataset.
-![img]()
+![img](https://github.com/Ruchika-Natiye/Music_Recommendation_System_Using_MachineLearning/blob/1836f9b91b957fe535d254bafcea06532716b0a0/top10%20artist.png)
 These visualizations help understand the dataset distribution before applying ML techniques.
 
 ## 🧠 How The Recommendation System Works
