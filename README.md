@@ -46,11 +46,11 @@ The dataset contains fields such as:
 ## 📸 Visualizations
 ### 🎤 Top 10 Genres
 The system plots a bar chart showing the most popular music genres.
-![img](https://github.com/Ruchika-Natiye/Music_Recommendation_System_Using_MachineLearning/blob/12267cb9883cf05bf840f3837bf1ad6f0952f666/top10%20artist.png)
+![img](https://github.com/Ruchika-Natiye/Music_Recommendation_System_Using_MachineLearning/blob/d354967de7150b1bb61e25cd83569a70503d899e/top10%20genre.png)
 
 ### 🎙️ Top 10 Artists
 A bar chart showing artists with the highest number of songs in the dataset.
-![img}()
+![img]()
 These visualizations help understand the dataset distribution before applying ML techniques.
 
 ## 🧠 How The Recommendation System Works
