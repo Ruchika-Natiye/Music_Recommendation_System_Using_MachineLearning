@@ -99,7 +99,7 @@ A horizontal bar plot shows the recommended song names vs. similarity score for 
 ```python
 sns.barplot(y='track_name', x='similarity', data=recommended_songs)
 ```
-![img]()
+![img](https://github.com/Ruchika-Natiye/Music_Recommendation_System_Using_MachineLearning/blob/2f88dc052db2f34eb7b77404df54d9de968f3b97/output.png)
 
 ## 📌 Future Improvements
 🔹 Add audio-based features (MFCC, tempo, etc.)
