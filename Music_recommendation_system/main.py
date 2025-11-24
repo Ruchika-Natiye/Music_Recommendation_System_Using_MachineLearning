@@ -19,26 +19,27 @@ plt.title('Top 10 Artists by Number of Songs')
 plt.xlabel('Number of Songs')
 plt.ylabel('Artist Name')
 plt.show()
-data['combined_features']=(data['genre'].fillna('')+''+data['artist_name'].fillna('')+''+data['track_name'].fillna(''))
+data['combined_features'] = (data['genre'].fillna('') + ' ' + data['artist_name'].fillna('') + ' ' +data['track_name'].fillna(''))
 tfidf=TfidfVectorizer(stop_words='english')
 tfidf_matrix=tfidf.fit_transform(data['combined_features'])
-cosine_sim=cosine_similarity(tfidf_matrix,tfidf_matrix)
-def get_recommendations(song_title,data,cosine_sim,top_n=10):
-    #get the index of the song that matches the title
-    idx=data[data['track_name']==song_title].index
-    if len(idx)==0:
+cosine_sim = cosine_similarity(tfidf_matrix, tfidf_matrix)
+def get_recommendations(song_title, data, cosine_sim, top_n=10):
+    idx = data[data['track_name'] == song_title].index
+    if len(idx) == 0:
         print("Song not found in the dataset.")
         return
-    idx=idx[0]
-    sim_scores=list(enumerate(cosine_sim[idx]))
-    sim_scores=sorted(sim_scores,key=lambda x:x[1],reverse=True)
-    sim_scores=sim_scores[1:top_n+1]
-    song_indices=[i[0] for i in sim_scores]
-    recommendations=data.iloc[song_indices]
+    idx = idx[0]   # get exact index
+    sim_scores = list(enumerate(cosine_sim[idx]))
+    sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
+    sim_scores = sim_scores[1:top_n+1]  # skip index 0 (self)
+    song_indices = [i[0] for i in sim_scores]
+    recommendations = data.iloc[song_indices]
     return recommendations
-recommended_songs=get_recommendations('cry',data,cosine_sim,top_n=10)
+recommended_songs = get_recommendations('cry', data, cosine_sim, top_n=10)
 print(recommended_songs[['track_name','artist_name','genre']])
-plt.figure(figsize=(10,6)) 
+recommended_songs = recommended_songs.copy()
+recommended_songs['similarity'] = [cosine_sim[data[data['track_name']=="cry"].index[0]][i] for i in recommended_songs.index]
+plt.figure(figsize=(12,6)) 
 sns.barplot(y='track_name',x='artist_name',data=recommended_songs,palette='coolwarm')  
 plt.title('Recommended Songs Similar to "Cry"') 
 plt.xlabel('Artist Name') 
