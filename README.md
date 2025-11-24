@@ -41,7 +41,8 @@ The dataset contains fields such as:
 * artist_name
 * genre
 * Additional metadata
-![img]()
+![img](https://github.com/Ruchika-Natiye/Music_Recommendation_System_Using_MachineLearning/blob/72c7410aab81f1d61daa109e9570a4e02bdfb748/sample.png)
+
 ## 📸 Visualizations
 ### 🎤 Top 10 Genres
 The system plots a bar chart showing the most popular music genres.
